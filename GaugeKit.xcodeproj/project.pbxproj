@@ -14,6 +14,19 @@
 		1C9405231B31D1BE001BF122 /* CAShapeLayer+oval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C94051F1B31D1BE001BF122 /* CAShapeLayer+oval.swift */; };
 		1C9405241B31D1BE001BF122 /* Gauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9405201B31D1BE001BF122 /* Gauge.swift */; };
 		1C9405251B31D1BE001BF122 /* GaugeCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9405211B31D1BE001BF122 /* GaugeCircle.swift */; };
+		82537215296DAEA40095BC2E /* GaugeKitMac.docc in Sources */ = {isa = PBXBuildFile; fileRef = 82537214296DAEA40095BC2E /* GaugeKitMac.docc */; };
+		8253721B296DAEA40095BC2E /* GaugeKitMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82537211296DAEA40095BC2E /* GaugeKitMac.framework */; };
+		82537220296DAEA40095BC2E /* GaugeKitMacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8253721F296DAEA40095BC2E /* GaugeKitMacTests.swift */; };
+		82537221296DAEA40095BC2E /* GaugeKitMac.h in Headers */ = {isa = PBXBuildFile; fileRef = 82537213296DAEA40095BC2E /* GaugeKitMac.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82537228296DAEDA0095BC2E /* GaugeHalf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C94051E1B31D1BE001BF122 /* GaugeHalf.swift */; };
+		8253722A296DAF790095BC2E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82537229296DAF790095BC2E /* Utility.swift */; };
+		8253722B296DAF9A0095BC2E /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82537229296DAF790095BC2E /* Utility.swift */; };
+		8253722C296DAFB80095BC2E /* Gauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9405201B31D1BE001BF122 /* Gauge.swift */; };
+		8253722D296DAFBD0095BC2E /* Gauge+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856D35171CACBE930007D5C6 /* Gauge+Animations.swift */; };
+		8253722E296DAFBD0095BC2E /* GaugeCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9405211B31D1BE001BF122 /* GaugeCircle.swift */; };
+		8253722F296DAFBD0095BC2E /* UIColor+Blend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850835531CAE20BE001A0DDB /* UIColor+Blend.swift */; };
+		82537230296DAFBD0095BC2E /* CAShapeLayer+oval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C94051F1B31D1BE001BF122 /* CAShapeLayer+oval.swift */; };
+		82537231296DAFC10095BC2E /* GaugeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66F53D8674BBD2D847BDB75 /* GaugeLine.swift */; };
 		850835541CAE20BE001A0DDB /* UIColor+Blend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850835531CAE20BE001A0DDB /* UIColor+Blend.swift */; };
 		856D35181CACBE930007D5C6 /* Gauge+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856D35171CACBE930007D5C6 /* Gauge+Animations.swift */; };
 		D66F51CE3D9204261BCE1C87 /* GaugeLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66F53D8674BBD2D847BDB75 /* GaugeLine.swift */; };
@@ -26,6 +39,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1C9404CF1B31CF85001BF122;
 			remoteInfo = GaugeKit;
+		};
+		8253721C296DAEA40095BC2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C9404C71B31CF85001BF122 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82537210296DAEA40095BC2E;
+			remoteInfo = GaugeKitMac;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -40,6 +60,12 @@
 		1C94051F1B31D1BE001BF122 /* CAShapeLayer+oval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CAShapeLayer+oval.swift"; sourceTree = "<group>"; };
 		1C9405201B31D1BE001BF122 /* Gauge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gauge.swift; sourceTree = "<group>"; };
 		1C9405211B31D1BE001BF122 /* GaugeCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaugeCircle.swift; sourceTree = "<group>"; };
+		82537211296DAEA40095BC2E /* GaugeKitMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GaugeKitMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82537213296DAEA40095BC2E /* GaugeKitMac.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GaugeKitMac.h; sourceTree = "<group>"; };
+		82537214296DAEA40095BC2E /* GaugeKitMac.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = GaugeKitMac.docc; sourceTree = "<group>"; };
+		8253721A296DAEA40095BC2E /* GaugeKitMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GaugeKitMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8253721F296DAEA40095BC2E /* GaugeKitMacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GaugeKitMacTests.swift; sourceTree = "<group>"; };
+		82537229296DAF790095BC2E /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		850835531CAE20BE001A0DDB /* UIColor+Blend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Blend.swift"; sourceTree = "<group>"; };
 		856D35171CACBE930007D5C6 /* Gauge+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Gauge+Animations.swift"; sourceTree = "<group>"; };
 		D66F53D8674BBD2D847BDB75 /* GaugeLine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaugeLine.swift; sourceTree = "<group>"; };
@@ -61,6 +87,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8253720E296DAEA40095BC2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82537217296DAEA40095BC2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8253721B296DAEA40095BC2E /* GaugeKitMac.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -69,6 +110,8 @@
 			children = (
 				1C9404D21B31CF85001BF122 /* GaugeKit */,
 				1C9404DF1B31CF85001BF122 /* GaugeKitTests */,
+				82537212296DAEA40095BC2E /* GaugeKitMac */,
+				8253721E296DAEA40095BC2E /* GaugeKitMacTests */,
 				1C9404D11B31CF85001BF122 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,6 +121,8 @@
 			children = (
 				1C9404D01B31CF85001BF122 /* GaugeKit.framework */,
 				1C9404DB1B31CF85001BF122 /* GaugeKitTests.xctest */,
+				82537211296DAEA40095BC2E /* GaugeKitMac.framework */,
+				8253721A296DAEA40095BC2E /* GaugeKitMacTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,6 +139,7 @@
 				1C9404D51B31CF85001BF122 /* GaugeKit.h */,
 				1C9404D31B31CF85001BF122 /* Supporting Files */,
 				D66F53D8674BBD2D847BDB75 /* GaugeLine.swift */,
+				82537229296DAF790095BC2E /* Utility.swift */,
 			);
 			path = GaugeKit;
 			sourceTree = "<group>";
@@ -123,6 +169,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		82537212296DAEA40095BC2E /* GaugeKitMac */ = {
+			isa = PBXGroup;
+			children = (
+				82537213296DAEA40095BC2E /* GaugeKitMac.h */,
+				82537214296DAEA40095BC2E /* GaugeKitMac.docc */,
+			);
+			path = GaugeKitMac;
+			sourceTree = "<group>";
+		};
+		8253721E296DAEA40095BC2E /* GaugeKitMacTests */ = {
+			isa = PBXGroup;
+			children = (
+				8253721F296DAEA40095BC2E /* GaugeKitMacTests.swift */,
+			);
+			path = GaugeKitMacTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -131,6 +194,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C9404D61B31CF85001BF122 /* GaugeKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8253720C296DAEA40095BC2E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82537221296DAEA40095BC2E /* GaugeKitMac.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +244,42 @@
 			productReference = 1C9404DB1B31CF85001BF122 /* GaugeKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		82537210296DAEA40095BC2E /* GaugeKitMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82537226296DAEA40095BC2E /* Build configuration list for PBXNativeTarget "GaugeKitMac" */;
+			buildPhases = (
+				8253720C296DAEA40095BC2E /* Headers */,
+				8253720D296DAEA40095BC2E /* Sources */,
+				8253720E296DAEA40095BC2E /* Frameworks */,
+				8253720F296DAEA40095BC2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GaugeKitMac;
+			productName = GaugeKitMac;
+			productReference = 82537211296DAEA40095BC2E /* GaugeKitMac.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		82537219296DAEA40095BC2E /* GaugeKitMacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82537227296DAEA40095BC2E /* Build configuration list for PBXNativeTarget "GaugeKitMacTests" */;
+			buildPhases = (
+				82537216296DAEA40095BC2E /* Sources */,
+				82537217296DAEA40095BC2E /* Frameworks */,
+				82537218296DAEA40095BC2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8253721D296DAEA40095BC2E /* PBXTargetDependency */,
+			);
+			name = GaugeKitMacTests;
+			productName = GaugeKitMacTests;
+			productReference = 8253721A296DAEA40095BC2E /* GaugeKitMacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -180,7 +287,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0700;
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Petr Korolev";
 				TargetAttributes = {
@@ -191,8 +298,19 @@
 					};
 					1C9404DA1B31CF85001BF122 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = 5UH69GW6GE;
+						DevelopmentTeam = NH8U964PWR;
 						LastSwiftMigration = 1130;
+						ProvisioningStyle = Automatic;
+					};
+					82537210296DAEA40095BC2E = {
+						CreatedOnToolsVersion = 14.2;
+						DevelopmentTeam = BLY6A8TNQK;
+						ProvisioningStyle = Automatic;
+					};
+					82537219296DAEA40095BC2E = {
+						CreatedOnToolsVersion = 14.2;
+						DevelopmentTeam = BLY6A8TNQK;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -211,6 +329,8 @@
 			targets = (
 				1C9404CF1B31CF85001BF122 /* GaugeKit */,
 				1C9404DA1B31CF85001BF122 /* GaugeKitTests */,
+				82537210296DAEA40095BC2E /* GaugeKitMac */,
+				82537219296DAEA40095BC2E /* GaugeKitMacTests */,
 			);
 		};
 /* End PBXProject section */
@@ -230,6 +350,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8253720F296DAEA40095BC2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82537218296DAEA40095BC2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -241,6 +375,7 @@
 				850835541CAE20BE001A0DDB /* UIColor+Blend.swift in Sources */,
 				1C9405231B31D1BE001BF122 /* CAShapeLayer+oval.swift in Sources */,
 				856D35181CACBE930007D5C6 /* Gauge+Animations.swift in Sources */,
+				8253722A296DAF790095BC2E /* Utility.swift in Sources */,
 				1C9405241B31D1BE001BF122 /* Gauge.swift in Sources */,
 				1C9405251B31D1BE001BF122 /* GaugeCircle.swift in Sources */,
 				D66F51CE3D9204261BCE1C87 /* GaugeLine.swift in Sources */,
@@ -255,6 +390,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8253720D296DAEA40095BC2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82537228296DAEDA0095BC2E /* GaugeHalf.swift in Sources */,
+				82537230296DAFBD0095BC2E /* CAShapeLayer+oval.swift in Sources */,
+				8253722F296DAFBD0095BC2E /* UIColor+Blend.swift in Sources */,
+				82537231296DAFC10095BC2E /* GaugeLine.swift in Sources */,
+				8253722E296DAFBD0095BC2E /* GaugeCircle.swift in Sources */,
+				82537215296DAEA40095BC2E /* GaugeKitMac.docc in Sources */,
+				8253722D296DAFBD0095BC2E /* Gauge+Animations.swift in Sources */,
+				8253722B296DAF9A0095BC2E /* Utility.swift in Sources */,
+				8253722C296DAFB80095BC2E /* Gauge.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82537216296DAEA40095BC2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82537220296DAEA40095BC2E /* GaugeKitMacTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -262,6 +421,11 @@
 			isa = PBXTargetDependency;
 			target = 1C9404CF1B31CF85001BF122 /* GaugeKit */;
 			targetProxy = 1C9404DD1B31CF85001BF122 /* PBXContainerItemProxy */;
+		};
+		8253721D296DAEA40095BC2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 82537210296DAEA40095BC2E /* GaugeKitMac */;
+			targetProxy = 8253721C296DAEA40095BC2E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -424,6 +588,8 @@
 		1C9404EA1B31CF85001BF122 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NH8U964PWR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -436,6 +602,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SW.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -443,6 +610,8 @@
 		1C9404EB1B31CF85001BF122 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NH8U964PWR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -451,6 +620,137 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SW.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		82537222296DAEA40095BC2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BLY6A8TNQK;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Petr Korolev. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.haystack.VoiceAI.GaugeKitMac;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		82537223296DAEA40095BC2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = BLY6A8TNQK;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Petr Korolev. All rights reserved.";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.haystack.VoiceAI.GaugeKitMac;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		82537224296DAEA40095BC2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = BLY6A8TNQK;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.haystack.VoiceAI.GaugeKitMacTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		82537225296DAEA40095BC2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BLY6A8TNQK;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = ai.haystack.VoiceAI.GaugeKitMacTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -481,6 +781,24 @@
 			buildConfigurations = (
 				1C9404EA1B31CF85001BF122 /* Debug */,
 				1C9404EB1B31CF85001BF122 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82537226296DAEA40095BC2E /* Build configuration list for PBXNativeTarget "GaugeKitMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82537222296DAEA40095BC2E /* Debug */,
+				82537223296DAEA40095BC2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		82537227296DAEA40095BC2E /* Build configuration list for PBXNativeTarget "GaugeKitMacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82537224296DAEA40095BC2E /* Debug */,
+				82537225296DAEA40095BC2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

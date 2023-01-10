@@ -6,7 +6,12 @@
 //  Copyright (c) 2015 Petr Korolev. All rights reserved.
 //
 
+#if canImport(AppKit)
+import AppKit
+#endif
+#if canImport(UIKit)
 import UIKit
+#endif
 import QuartzCore
 
 let pi_2 = Double.pi / 2
@@ -57,9 +62,9 @@ open class Gauge: UIView {
     internal var _bgStartColor: UIColor {
         get {
             if let bgColor = bgColor {
-                return bgColor.withAlphaComponent(bgAlpha)
+                return bgColor
             } else {
-                return startColor.withAlphaComponent(bgAlpha)
+                return startColor
             }
         }
     }
@@ -67,15 +72,10 @@ open class Gauge: UIView {
     internal var _bgEndColor: UIColor {
         get {
             if let bgColor = bgColor {
-                return bgColor.withAlphaComponent(bgAlpha)
+                return bgColor
             } else {
-                return endColor.withAlphaComponent(bgAlpha)
+                return endColor
             }
-        }
-    }
-    @IBInspectable open var bgAlpha: CGFloat = 0.2 {
-        didSet {
-            updateLayerProperties()
         }
     }
     @IBInspectable open var rotate: Double = 0 {
@@ -173,7 +173,7 @@ open class Gauge: UIView {
     // Animation variables
     internal var animationTimer: Timer = Timer()
     internal var animationCompletionBlock: (Bool) -> () = {_ in }
-    
+
     func getGauge(_ rotateAngle: Double = 0) -> CAShapeLayer {
         switch type {
         case .left, .right:
@@ -188,8 +188,10 @@ open class Gauge: UIView {
     }
 
     func updateLayerProperties() {
+        #if canImport(UIKit)
         backgroundColor = UIColor.clear
-        
+        #endif
+
         if (ringLayer != nil) {
             switch type {
             case .left, .right:
@@ -251,6 +253,9 @@ open class Gauge: UIView {
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
+        #if canImport(AppKit)
+        wantsLayer = true
+        #endif
         updateLayerProperties()
     }
 
@@ -272,17 +277,29 @@ open class Gauge: UIView {
     }
 
     func resetLayers() {
-        layer.sublayers = nil
+        theLayer.sublayers = nil
         bgLayer = nil
         ringLayer = nil
         ringGradientLayer = nil
         bgGradientLayer = nil
     }
 
-    open override func layoutSubviews() {
+    private func _updateLayout() {
         resetLayers()
-        gaugeLayer = getGauge(rotate / 10 * Double.pi)
-        layer.addSublayer(gaugeLayer)
+        gaugeLayer = getGauge(rotate)
+        theLayer.addSublayer(gaugeLayer)
         updateLayerProperties()
     }
+
+    #if canImport(UIKit)
+    open override func layoutSubviews() {
+        _updateLayout()
+    }
+    #endif
+
+    #if canImport(AppKit)
+    open override func layout() {
+        _updateLayout()
+    }
+    #endif
 }

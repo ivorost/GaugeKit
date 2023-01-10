@@ -6,7 +6,12 @@
 //  Copyright © 2016 Petr Korolev. All rights reserved.
 //
 
+#if canImport(AppKit)
+import AppKit
+#endif
+#if canImport(UIKit)
 import UIKit
+#endif
 
 extension Gauge {
     public func animateRate(_ duration: TimeInterval, newValue: CGFloat, completion: @escaping (Bool) -> ()) -> Void {

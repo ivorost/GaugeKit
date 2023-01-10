@@ -6,7 +6,12 @@
 //  Copyright (c) 2015 Petr Korolev. All rights reserved.
 //
 
+#if canImport(AppKit)
+import AppKit
+#endif
+#if canImport(UIKit)
 import UIKit
+#endif
 
 func + (left: UIColor, right: UIColor) -> UIColor {
 

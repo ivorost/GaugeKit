@@ -6,7 +6,12 @@
 //  Copyright (c) 2015 Petr Korolev. All rights reserved.
 //
 
+#if canImport(AppKit)
+import AppKit
+#endif
+#if canImport(UIKit)
 import UIKit
+#endif
 import QuartzCore
 
 
@@ -21,12 +26,12 @@ extension Gauge: GaugeLine {
 
         if bgLayer == nil {
             bgLayer = CAShapeLayer.getLine(lineWidth, strokeStart: 0, strokeEnd: 1, strokeColor: _bgStartColor, fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: bounds)
-            bgLayer.frame = layer.bounds
+            bgLayer.frame = theLayer.bounds
         }
 
         if ringLayer == nil {
             ringLayer = CAShapeLayer.getLine(lineWidth, strokeStart: 0, strokeEnd: 1, strokeColor: UIColor.clear, fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: bounds)
-            ringLayer.frame = layer.bounds
+            ringLayer.frame = theLayer.bounds
         }
 
         if bgGradientLayer == nil {
@@ -34,7 +39,7 @@ extension Gauge: GaugeLine {
             bgGradientLayer.startPoint = CGPoint(x: 0, y: 1)
             bgGradientLayer.endPoint = CGPoint(x: 1, y: 1)
             bgGradientLayer.colors = [_bgStartColor.cgColor, _bgEndColor.cgColor]
-            bgGradientLayer.frame = layer.bounds
+            bgGradientLayer.frame = theLayer.bounds
             bgGradientLayer.mask = bgLayer
             gaugeLayer.addSublayer(bgGradientLayer)
         }
@@ -44,12 +49,12 @@ extension Gauge: GaugeLine {
             ringGradientLayer.startPoint = CGPoint(x: 0, y: 1)
             ringGradientLayer.endPoint = CGPoint(x: 1, y: 1)
             ringGradientLayer.colors = [startColor.cgColor, endColor.cgColor]
-            ringGradientLayer.frame = layer.bounds
+            ringGradientLayer.frame = theLayer.bounds
             ringGradientLayer.mask = ringLayer
             gaugeLayer.addSublayer(ringGradientLayer)
         }
 
-        gaugeLayer.frame = layer.bounds
+        gaugeLayer.frame = theLayer.bounds
         gaugeLayer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
 
         if roundCap {

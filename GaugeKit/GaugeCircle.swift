@@ -6,7 +6,12 @@
 //  Copyright (c) 2015 Petr Korolev. All rights reserved.
 //
 
+#if canImport(AppKit)
+import AppKit
+#endif
+#if canImport(UIKit)
 import UIKit
+#endif
 import QuartzCore
 
 
@@ -21,20 +26,20 @@ extension Gauge: GaugeCircle {
 
         if bgLayer == nil {
             bgLayer = CAShapeLayer.getOval(lineWidth, strokeStart: 0, strokeEnd: 1, strokeColor: _bgStartColor, fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: bounds)
-            bgLayer.frame = layer.bounds
+            bgLayer.frame = theLayer.bounds
             gaugeLayer.addSublayer(bgLayer)
         }
 
         if ringLayer == nil {
             ringLayer = CAShapeLayer.getOval(lineWidth, strokeStart: 0, strokeEnd: 1, strokeColor: UIColor.clear, fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: bounds)
 
-            ringLayer.frame = layer.bounds
+            ringLayer.frame = theLayer.bounds
             gaugeLayer.addSublayer(ringLayer)
         }
-        gaugeLayer.frame = layer.bounds
+        gaugeLayer.frame = theLayer.bounds
         gaugeLayer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         // Rotate it in 90° CCW to make start position from the top
-        gaugeLayer.transform = CATransform3DRotate(gaugeLayer.transform, CGFloat(rotateAngle * 2 - pi_2), 0, 0, 1)
+        gaugeLayer.transform = CATransform3DRotate(gaugeLayer.transform, CGFloat(rotateAngle), 0, 0, 1)
 
         if roundCap {
             ringLayer.lineCap = .round

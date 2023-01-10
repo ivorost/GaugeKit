@@ -6,7 +6,12 @@
 //  Copyright (c) 2015 Petr Korolev. All rights reserved.
 //
 
+#if canImport(AppKit)
+import AppKit
+#endif
+#if canImport(UIKit)
 import UIKit
+#endif
 import QuartzCore
 
 protocol GaugeHalf {
@@ -24,14 +29,14 @@ extension Gauge: GaugeHalf {
         if bgLayer == nil {
             bgLayer = CAShapeLayer.getOval(lineWidth, strokeStart: 0, strokeEnd: 0.5, strokeColor: _bgStartColor,
                     fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: newBounds, rotateAngle: pi_2, isCircle: isCircle)
-            bgLayer.frame = layer.bounds
+            bgLayer.frame = theLayer.bounds
             bgLayer.position = CGPoint(x: bgLayer.position.x + bounds.width - lineWidth, y: bgLayer.position.y)
         }
 
         if bgGradientLayer == nil {
             bgGradientLayer = CAGradientLayer()
-            if isCircle && (layer.bounds.width < layer.bounds.height) {
-                let adjust: CGFloat = (layer.bounds.height - layer.bounds.width) / 2 / layer.bounds.height
+            if isCircle && (theLayer.bounds.width < theLayer.bounds.height) {
+                let adjust: CGFloat = (theLayer.bounds.height - theLayer.bounds.width) / 2 / theLayer.bounds.height
                 bgGradientLayer.startPoint = CGPoint(x: 0.5, y: 1 - adjust)
                 bgGradientLayer.endPoint = CGPoint(x: 0.5, y: adjust)
             } else {
@@ -39,7 +44,7 @@ extension Gauge: GaugeHalf {
                 bgGradientLayer.endPoint = CGPoint(x: 0.5, y: 0)
             }
             bgGradientLayer.colors = [_bgStartColor.cgColor, _bgEndColor.cgColor]
-            bgGradientLayer.frame = layer.bounds
+            bgGradientLayer.frame = theLayer.bounds
             bgGradientLayer.mask = bgLayer
             gaugeLayer.addSublayer(bgGradientLayer)
         }
@@ -47,14 +52,14 @@ extension Gauge: GaugeHalf {
         if ringLayer == nil {
             ringLayer = CAShapeLayer.getOval(lineWidth, strokeStart: 0, strokeEnd: 0.5, strokeColor: startColor,
                     fillColor: UIColor.clear, shadowRadius: shadowRadius, shadowOpacity: shadowOpacity, shadowOffsset: CGSize.zero, bounds: newBounds, rotateAngle: pi_2, isCircle: isCircle)
-            ringLayer.frame = layer.bounds
+            ringLayer.frame = theLayer.bounds
             ringLayer.position = CGPoint(x: ringLayer.position.x + bounds.width - lineWidth, y: ringLayer.position.y)
         }
 
         if ringGradientLayer == nil {
             ringGradientLayer = CAGradientLayer()
-            if isCircle && (layer.bounds.width < layer.bounds.height) {
-                let adjust: CGFloat = (layer.bounds.height - layer.bounds.width) / 2 / layer.bounds.height
+            if isCircle && (theLayer.bounds.width < theLayer.bounds.height) {
+                let adjust: CGFloat = (theLayer.bounds.height - theLayer.bounds.width) / 2 / theLayer.bounds.height
                 ringGradientLayer.startPoint = CGPoint(x: 0.5, y: 1 - adjust)
                 ringGradientLayer.endPoint = CGPoint(x: 0.5, y: adjust)
             } else {
@@ -62,7 +67,7 @@ extension Gauge: GaugeHalf {
                 ringGradientLayer.endPoint = CGPoint(x: 0.5, y: 0)
             }
             ringGradientLayer.colors = [startColor.cgColor, endColor.cgColor]
-            ringGradientLayer.frame = layer.bounds
+            ringGradientLayer.frame = theLayer.bounds
             ringGradientLayer.mask = ringLayer
             gaugeLayer.addSublayer(ringGradientLayer)
         }
@@ -72,7 +77,7 @@ extension Gauge: GaugeHalf {
             bgLayer.lineCap = .round
         }
 
-        gaugeLayer.frame = layer.bounds
+        gaugeLayer.frame = theLayer.bounds
         gaugeLayer.anchorPoint = CGPoint(x: 0.5, y: 0.5)
         gaugeLayer.transform = CATransform3DRotate(gaugeLayer.transform, CGFloat(rotateAngle), 0, 0, 1)
         if reverse {
