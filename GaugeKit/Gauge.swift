@@ -28,7 +28,7 @@ public enum GaugeType: Int {
 open class Gauge: UIView {
     @IBInspectable open var startColor: UIColor = UIColor.green {
         didSet {
-            resetLayers()
+//            resetLayers()
             updateLayerProperties()
         }
     }
@@ -143,7 +143,7 @@ open class Gauge: UIView {
         }
     }
     /// percantage of filled Gauge. 0..maxValue.
-    @IBInspectable open var rate: CGFloat = 8 {
+    @IBInspectable open var rate: CGFloat = 0 {
         didSet {
             updateLayerProperties()
         }
@@ -158,6 +158,7 @@ open class Gauge: UIView {
             updateLayerProperties()
         }
     }
+    open var animationDuration: TimeInterval = 0.25
 
 /// Main gauge layer
     var gaugeLayer: CALayer!
@@ -193,14 +194,23 @@ open class Gauge: UIView {
         #endif
 
         if (ringLayer != nil) {
+            let strokeEnd: CGFloat
+
             switch type {
             case .left, .right:
                 // For Half Gauge, you have to fill 50% of circle and round it wisely
                 let percentage = (rate / 2 / maxValue).truncatingRemainder(dividingBy: 0.5)
-                ringLayer.strokeEnd = (rate >= maxValue ? 0.5 : percentage + ((rate != 0 && percentage == 0) ? 0.5 : 0))
+                strokeEnd = (rate >= maxValue ? 0.5 : percentage + ((rate != 0 && percentage == 0) ? 0.5 : 0))
             default:
-                ringLayer.strokeEnd = rate / maxValue
+                strokeEnd = rate / maxValue
             }
+
+            let strokeAnimation = CABasicAnimation(keyPath: "strokeEnd")
+            strokeAnimation.fromValue = ringLayer.strokeEnd
+            strokeAnimation.duration = animationDuration;
+            strokeAnimation.isAdditive = true
+            ringLayer.add(strokeAnimation, forKey: "strokeEnd")
+            ringLayer.strokeEnd = strokeEnd
 
             var strokeColor = UIColor.lightGray
 
@@ -285,10 +295,13 @@ open class Gauge: UIView {
     }
 
     private func _updateLayout() {
-        resetLayers()
-        gaugeLayer = getGauge(rotate)
-        theLayer.addSublayer(gaugeLayer)
-        updateLayerProperties()
+        if ringLayer == nil {
+            resetLayers()
+            gaugeLayer = getGauge(rotate)
+            theLayer.addSublayer(gaugeLayer)
+            updateLayerProperties()
+        }
+
     }
 
     #if canImport(UIKit)
